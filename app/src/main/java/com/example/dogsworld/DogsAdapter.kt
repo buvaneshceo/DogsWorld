@@ -9,9 +9,18 @@ import androidx.recyclerview.widget.RecyclerView
 
 class DogsAdapter(private val doglist: ArrayList<Dogs>) :
     RecyclerView.Adapter<DogsAdapter.ViewHolderClass>() {
-    class ViewHolderClass(itemView: View) : RecyclerView.ViewHolder(itemView) {
+
+    var onItemClick: ((Dogs) -> Unit)? = null
+
+    inner class ViewHolderClass(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val rvimage: ImageView = itemView.findViewById(R.id.image)
         val rvtext: TextView = itemView.findViewById(R.id.name)
+
+        init {
+            itemView.setOnClickListener {
+                onItemClick?.invoke(doglist[adapterPosition])
+            }
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolderClass {
