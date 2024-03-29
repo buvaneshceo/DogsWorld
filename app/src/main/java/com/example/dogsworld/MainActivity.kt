@@ -57,15 +57,15 @@ class MainActivity : AppCompatActivity() {
         )
 
         detaillistImage = arrayOf(
-            R.drawable.labrador_retriever,
-            R.drawable.boxer,
-            R.drawable.beagle,
-            R.drawable.bulldog,
-            R.drawable.poodle,
-            R.drawable.german_shepherd,
-            R.drawable.golden_retriever,
-            R.drawable.rottweiler,
-            R.drawable.yorkshire_terrier
+            R.drawable.labrador_retriever1,
+            R.drawable.boxer1,
+            R.drawable.beagle1,
+            R.drawable.bulldog1,
+            R.drawable.poodle1,
+            R.drawable.german_shepherd1,
+            R.drawable.golden_retriever1,
+            R.drawable.rottweiler1,
+            R.drawable.yorkshire_terrier1
         )
 
         recyclerView = findViewById(R.id.rvcycle)
